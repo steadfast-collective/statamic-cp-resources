@@ -63,7 +63,7 @@
         <div class="grid grid-cols-2 gap-4 py-2">
             <ul class="list-disc pl-2">
                 @foreach($additionalResources as $additionalResource)
-                    <li><a class="text-blue hover:text-blue-dark" href="#">How to use Trello</a></li>
+                    <li><a class="text-blue hover:text-blue-dark" href="{{ $additionalResource['url'] }}">{{ $additionalResource['name'] }}</a></li>
                 @endforeach
             </ul>
         </div>
