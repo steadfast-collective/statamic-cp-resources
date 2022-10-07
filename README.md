@@ -14,10 +14,11 @@ This addon:
 
 ## How to Install
 
-Run the following command from your project root:
+Run the following commands from your project root:
 
 ```bash
 composer require steadfast-collective/statamic-cp-resources
+php artisan vendor:publish --tag=statamic-cp-resources-config
 ```
 
 ## How to Use
