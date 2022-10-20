@@ -15,5 +15,8 @@
                 "SteadfastCollective\\StatamicCpResources\\ServiceProvider"
             ]
         }
+    },
+    "require": {
+        "statamic/cms": "^3.3"
     }
 }
