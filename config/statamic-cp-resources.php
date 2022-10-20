@@ -2,6 +2,11 @@
 
 return [
 
+    'nav' => [
+        'section' => 'Steadfast',
+        'title' => 'Resources',
+    ],
+
     'trello_url' => 'https://trello.com/b/uLZV3PP0/issue-reporting-client',
 
     /**
