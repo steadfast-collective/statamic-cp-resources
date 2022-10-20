@@ -29,11 +29,4 @@ return [
         ],
     ],
 
-    // allow control over navigation title
-    'nav' => [
-        'name' => 'steadfast.',
-        'prefix' => 'steadfast',
-        'title' => 'Steadfast',
-    ],
-
 ];
