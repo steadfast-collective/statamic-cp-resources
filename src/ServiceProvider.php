@@ -21,15 +21,15 @@ class ServiceProvider extends AddonServiceProvider
 
         Statamic::booted(function () {
             Nav::extend(function ($nav) {
-                $nav->content('Resources')
-                    ->section(config('statamic-cp-resources.nav.title', 'steadfast'))
+                $nav->content(config('statamic.cp-resources.nav.title', 'Resources'))
+                    ->section(config('statamic-cp-resources.nav.section', 'Steadfast'))
                     ->route('cp-resources.index')
                     ->icon('pin')
-                    ->can('view '.config('statamic-cp-resources.nav.title', 'Steadfast').' resources');
+                    ->can('view resources');
             });
 
-            Permission::register('view '.config('statamic-cp-resources.nav.title', 'Steadfast').' resources')
-                ->label('View '.config('statamic-cp-resources.nav.title', 'Steadfast').' Resources');
+            Permission::register('view resources')
+                ->label('View Resources');
         });
     }
 }
