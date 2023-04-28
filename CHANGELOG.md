@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.0 (2023-04-28)
+
+### What's new
+
+- Statamic 4 Compatibility #3 by @duncanmcclean
+
 ## v2.0.0 (2022-10-20)
 
 ### What's new
