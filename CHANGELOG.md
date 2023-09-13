@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.1 (2023-09-13)
+
+### What's fixed
+
+* Fixed "broken" video grid with Statamic 4 by @duncanmcclean
+
 ## v2.1.0 (2023-04-28)
 
 ### What's new
