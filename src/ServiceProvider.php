@@ -1,6 +1,6 @@
 <?php
 
-namespace SteadfastCollective\StatamicCpResources;
+namespace Thoughtco\StatamicCpResources;
 
 use Statamic\Facades\CP\Nav;
 use Statamic\Facades\Permission;

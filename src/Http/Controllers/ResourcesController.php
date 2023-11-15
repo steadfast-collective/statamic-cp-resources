@@ -1,6 +1,6 @@
 <?php
 
-namespace SteadfastCollective\StatamicCpResources\Http\Controllers;
+namespace Thoughtco\StatamicCpResources\Http\Controllers;
 
 use Statamic\Facades\User;
 use Statamic\Http\Controllers\CP\CpController;

@@ -3,7 +3,7 @@
 return [
 
     'nav' => [
-        'section' => 'Steadfast',
+        'section' => 'Thought Collective',
         'title' => 'Resources',
     ],
 
@@ -23,10 +23,10 @@ return [
     ],
 
     'additional_resources' => [
-        [
-            'name' => 'How to use Trello',
-            'url' => 'https://steadfastcollective.com',
-        ],
+        // [
+        //     'name' => 'How to use Trello',
+        //     'url' => 'https://thoughtcollective.com',
+        // ],
     ],
 
 ];
