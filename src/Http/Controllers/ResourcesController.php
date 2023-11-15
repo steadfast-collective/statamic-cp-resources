@@ -1,6 +1,6 @@
 <?php
 
-namespace SteadfastCollective\StatamicCpResources\Http\Controllers;
+namespace Thoughtco\StatamicCpResources\Http\Controllers;
 
 use Statamic\Facades\User;
 use Statamic\Http\Controllers\CP\CpController;
@@ -8,8 +8,8 @@ use Statamic\Http\Controllers\CP\CpController;
 class ResourcesController extends CpController
 {
     public function __invoke()
-    {
-        if (! User::current()->can('view steadfast resources')) {
+    {        
+        if (! User::current()->can('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))) {
             abort(403);
         }
 

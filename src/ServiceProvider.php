@@ -1,6 +1,6 @@
 <?php
 
-namespace SteadfastCollective\StatamicCpResources;
+namespace Thoughtco\StatamicCpResources;
 
 use Statamic\Facades\CP\Nav;
 use Statamic\Facades\Permission;
@@ -22,14 +22,14 @@ class ServiceProvider extends AddonServiceProvider
         Statamic::booted(function () {
             Nav::extend(function ($nav) {
                 $nav->content(config('statamic.cp-resources.nav.title', 'Resources'))
-                    ->section(config('statamic-cp-resources.nav.section', 'Steadfast'))
+                    ->section(config('statamic-cp-resources.nav.section', 'Thought Collective'))
                     ->route('cp-resources.index')
                     ->icon('pin')
                     ->can('view resources');
             });
 
-            Permission::register('view resources')
-                ->label('View Resources');
+            Permission::register('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))
+                ->label('View '.config('thoughtco.client-dashboard.nav.title'));
         });
     }
 }
