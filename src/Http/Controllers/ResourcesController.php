@@ -9,7 +9,7 @@ class ResourcesController extends CpController
 {
     public function __invoke()
     {        
-        if (! User::current()->can('view '.strtolower(config('statamic-cp-resources.nav.title')))) {
+        if (! User::current()->can('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))) {
             abort(403);
         }
 

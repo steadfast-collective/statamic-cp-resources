@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2.1 (2023-11-15)
+
+### What's fixed
+
+* Forked from Steadfast Collective
+
 ## v2.1.1 (2023-09-13)
 
 ### What's fixed
