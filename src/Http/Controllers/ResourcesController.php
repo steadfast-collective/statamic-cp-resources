@@ -8,8 +8,8 @@ use Statamic\Http\Controllers\CP\CpController;
 class ResourcesController extends CpController
 {
     public function __invoke()
-    {
-        if (! User::current()->can('view steadfast resources')) {
+    {        
+        if (! User::current()->can('view '.strtolower(config('statamic-cp-resources.nav.title')))) {
             abort(403);
         }
 
