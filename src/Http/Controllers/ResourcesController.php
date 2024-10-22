@@ -14,7 +14,8 @@ class ResourcesController extends CpController
         }
 
         return view('statamic-cp-resources::index', [
-            'trelloUrl' => config('statamic-cp-resources.trello_url'),
+            'externalUrl' => config('statamic-cp-resources.external_url', 'https://trello.com/b/uLZV3PP0/issue-reporting-client'),
+            'externalName' => config('statamic-cp-resources.external_name', 'Trello'),
             'looms' => config('statamic-cp-resources.looms'),
             'additionalResources' => config('statamic-cp-resources.additional_resources'),
         ]);

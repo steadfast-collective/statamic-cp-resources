@@ -5,8 +5,8 @@
 <div class="flex items-center mb-3">
     <h1 class="flex-1">Resources</h1>
 
-    @if($trelloUrl)
-        <a href="{{ $trelloUrl }}" target="_blank" class="btn flex items-center">
+    @if($externalUrl)
+        <a href="{{ $externalUrl }}" target="_blank" class="btn flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" class="pr-2 h-4">
                 <defs>
                     <clipPath id="a">
@@ -17,7 +17,7 @@
                 </defs>
                 <g clip-path="url(#a)"><path d="M0 0h25.208v25.192H0V0z" /></g>
             </svg>
-            Trello
+            {{ $externalName }}
         </a>
     @endif
 </div>
@@ -60,7 +60,7 @@
 
         <section class="px-2 py-1">
             <div class="grid grid-cols-2 gap-4 py-2">
-                <ul class="list-disc pl-2">
+                <ul class="list-disc pl-2 list-inside">
                     @foreach($additionalResources as $additionalResource)
                         <li><a class="text-blue hover:text-blue-dark" href="{{ $additionalResource['url'] }}">{{ $additionalResource['name'] }}</a></li>
                     @endforeach

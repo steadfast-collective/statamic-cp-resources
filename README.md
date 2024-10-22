@@ -19,6 +19,7 @@ Run the following commands from your project root:
 ```bash
 composer require steadfast-collective/statamic-cp-resources
 php artisan vendor:publish --tag=statamic-cp-resources-config
+php artisan vendor:publish --tag=statamic-cp-resources
 ```
 
 ## How to Use

@@ -7,7 +7,8 @@ return [
         'title' => 'Resources',
     ],
 
-    'trello_url' => 'https://trello.com/b/uLZV3PP0/issue-reporting-client',
+    'external_url' => 'https://trello.com/b/uLZV3PP0/issue-reporting-client',
+    'external_name' => 'Trello',
 
     /**
      * Configure Loom videos to be displayed on the dashboard.
