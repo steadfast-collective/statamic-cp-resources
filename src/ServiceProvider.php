@@ -13,6 +13,13 @@ class ServiceProvider extends AddonServiceProvider
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
+    protected $vite = [
+        'input' => [
+            'resources/css/addon.css',
+        ],
+        'publicDirectory' => 'resources/dist',
+    ];
+
     public function boot()
     {
         parent::boot();
