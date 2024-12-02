@@ -22,29 +22,6 @@
     @endif
 </div>
 
-@if(count($looms) > 0)
-    <div class="card p-0 mb-4">
-        <header class="flex justify-between items-center p-2 border-b">
-            <h2 class="flex items-center">
-                <span>{{ __('Videos') }}</span>
-            </h2>
-        </header>
-
-        <section class="p-4">
-            <div class="flex flex-row flex-wrap">
-                @foreach($looms as $loom)
-                    <div class="w-full md:w-1/2 mb-4 pr-4">
-                        <div class="mb-2" style="position: relative; padding-bottom: 60.55625790139065%; height: 0;">
-                            <iframe src="{{ $loom['embed_url'] }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                        </div>
-                        <h3>{{ $loom['name'] }}</h3>
-                    </div>
-                @endforeach
-            </div>
-        </section>
-    </div>
-@endif
-
 @if(count($additionalResources) > 0)
     <div class="card p-0 mb-4">
         <header class="flex justify-between items-center p-2 border-b">
@@ -68,7 +45,30 @@
             </div>
         </section>
     </div>
-    @endif
+@endif
+
+@if(count($looms) > 0)
+    <div class="card p-0 mb-4">
+        <header class="flex justify-between items-center p-2 border-b">
+            <h2 class="flex items-center">
+                <span>{{ __('Videos') }}</span>
+            </h2>
+        </header>
+
+        <section class="p-4">
+            <div class="flex flex-row flex-wrap">
+                @foreach($looms as $loom)
+                    <div class="w-full md:w-1/2 mb-4 pr-4">
+                        <div class="mb-2" style="position: relative; padding-bottom: 60.55625790139065%; height: 0;">
+                            <iframe src="{{ $loom['embed_url'] }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                        </div>
+                        <h3>{{ $loom['name'] }}</h3>
+                    </div>
+                @endforeach
+            </div>
+        </section>
+    </div>
+@endif
 @endsection
 
 @push('head')
