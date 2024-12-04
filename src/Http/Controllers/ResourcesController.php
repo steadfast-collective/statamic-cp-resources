@@ -9,7 +9,7 @@ class ResourcesController extends CpController
 {
     public function __invoke()
     {
-        if (! User::current()->can('view steadfast resources')) {
+        if (! User::current()->can('view resources')) {
             abort(403);
         }
 
