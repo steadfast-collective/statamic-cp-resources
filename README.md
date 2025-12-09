@@ -26,6 +26,10 @@ php artisan vendor:publish --tag=statamic-cp-resources
 
 By default, a 'Resources' page will be added to the Control Panel navigation. However, the page will be blank.
 
-In the `config/statamic-client-dashboard.php` config file, you may configure the link to the Trello board, any Looms you wish to be displayed & any additional resources which should be linked.
+In the `config/statamic-cp-resources.php` config file, you may configure a link to an external URL (Asana, Trello, etc) any Looms you wish to be displayed & any additional resources which should be linked.
 
 You may also configure the titles used in the Control Panel navigation.
+
+## Common Issues
+### Embeds not loading
+This is usually fixed by ensuring your site has a valid SSL certificate.
