@@ -2,6 +2,7 @@
 
 namespace SteadfastCollective\StatamicCpResources\Http\Controllers;
 
+use Inertia\Inertia;
 use Statamic\Facades\User;
 use Statamic\Http\Controllers\CP\CpController;
 
@@ -13,10 +14,10 @@ class ResourcesController extends CpController
             abort(403);
         }
 
-        return view('statamic-cp-resources::index', [
+        return Inertia::render('statamic-cp-resources::Index', [
             'externalUrl' => config('statamic-cp-resources.external_url', 'https://trello.com/b/uLZV3PP0/issue-reporting-client'),
             'externalName' => config('statamic-cp-resources.external_name', 'Trello'),
-            'looms' => config('statamic-cp-resources.looms'),
+            'videos' => config('statamic-cp-resources.looms'),
             'additionalResources' => config('statamic-cp-resources.additional_resources'),
         ]);
     }
