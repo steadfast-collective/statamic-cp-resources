@@ -7,16 +7,21 @@ const props = defineProps({
     externalName: String || null,
     videos: Array || [],
     additionalResources: Array || [],
+    title: String || 'Resources',
 });
 
 </script>
 
 <template>
     <div>
-        <Head title="Resources" />
+        <Head :title="title" />
 
         <div class="max-w-5xl mx-auto flex flex-col">
-            <Header :title="__('Resources')" icon="pin" level="1">
+            <Header
+                :title="title"
+                icon="pin"
+                level="1"
+            >
                 <template #actions>
                     <Button
                         v-if="externalUrl && externalName"

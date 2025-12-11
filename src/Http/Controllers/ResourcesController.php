@@ -19,6 +19,7 @@ class ResourcesController extends CpController
             'externalName' => config('statamic-cp-resources.external_name', 'Trello'),
             'videos' => config('statamic-cp-resources.looms'),
             'additionalResources' => config('statamic-cp-resources.additional_resources'),
+            'title' => config('statamic-cp-resources.nav.title', 'Training'),
         ]);
     }
 }

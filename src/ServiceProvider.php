@@ -29,7 +29,7 @@ class ServiceProvider extends AddonServiceProvider
 
         Statamic::booted(function () {
             Nav::extend(function ($nav) {
-                $nav->content(config('statamic.cp-resources.nav.title', 'Resources'))
+                $nav->content(config('statamic-cp-resources.nav.title', 'Resources'))
                     ->section(config('statamic-cp-resources.nav.section', 'Steadfast'))
                     ->route('cp-resources.index')
                     ->icon('pin')
