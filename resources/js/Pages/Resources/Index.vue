@@ -3,11 +3,15 @@ import { Header, Heading, CardPanel, Button, Card } from '@statamic/cms/ui';
 import { Head, Link } from '@statamic/cms/inertia';
 
 const props = defineProps({
+    title: String || 'Resources',
     externalUrl: String || null,
     externalName: String || null,
-    videos: Array || [],
+    embeds: Array || [],
+    embedsTitle: String || 'Embeds',
+    embedsIcon: String || 'movie-video-clip',
     additionalResources: Array || [],
-    title: String || 'Resources',
+    additionalResourcesTitle: String || 'Additional Resources',
+    additionalResourcesIcon: String || 'link',
 });
 
 </script>
@@ -40,11 +44,11 @@ const props = defineProps({
             >
                 <Heading
                     size="xl"
-                    icon="link"
+                    :icon="additionalResourcesIcon"
                     level="2"
                     class="mb-2"
                 >
-                    {{ __('Additional Resources') }}
+                    {{ additionalResourcesTitle }}
                 </Heading>
 
                 <Card class="grid grid-cols-2 gap-4">
@@ -61,27 +65,28 @@ const props = defineProps({
             </div>
 
             <div
-                v-if="videos.length > 0 "
+                v-if="embeds.length > 0 "
             >
                 <Heading
                     size="xl"
-                    icon="movie-video-clip"
+                    :icon="embedsIcon"
+
                     level="2"
                     class="mb-2"
                 >
-                    {{ __('Videos') }}
+                    {{ embedsTitle }}
                 </Heading>
 
                 <div class="grid grid-cols-2 gap-4">
                     <CardPanel
-                        v-for="(video, index) in videos"
+                        v-for="(embed, index) in embeds"
                         :key="index"
                         variant="flat"
-                        :heading="video.name"
+                        :heading="embed.name"
                     >
                         <div style="position: relative; padding-bottom: 60.55625790139065%; height: 0;">
                             <iframe
-                                :src="video.embed_url"
+                                :src="embed.embed_url"
                                 frameborder="0"
                                 webkitallowfullscreen
                                 mozallowfullscreen

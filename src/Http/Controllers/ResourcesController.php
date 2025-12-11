@@ -13,13 +13,16 @@ class ResourcesController extends CpController
         if (! User::current()->can('view resources')) {
             abort(403);
         }
-
         return Inertia::render('statamic-cp-resources::Index', [
+            'title' => config('statamic-cp-resources.nav.title', 'Training'),
             'externalUrl' => config('statamic-cp-resources.external_url', 'https://trello.com/b/uLZV3PP0/issue-reporting-client'),
             'externalName' => config('statamic-cp-resources.external_name', 'Trello'),
-            'videos' => config('statamic-cp-resources.looms'),
+            'embeds' => config('statamic-cp-resources.embeds'),
+            'embedsTitle' => config('statamic-cp-resources.embeds_title', 'Embeds'),
+            'embedsIcon' => config('statamic-cp-resources.embeds_icon', 'movie-video-clip'),
             'additionalResources' => config('statamic-cp-resources.additional_resources'),
-            'title' => config('statamic-cp-resources.nav.title', 'Training'),
+            'additionalResourcesTitle' => config('statamic-cp-resources.additional_resources_title', 'Additional Resources'),
+            'additionalResourcesIcon' => config('statamic-cp-resources.additional_resources_icon', 'link'),
         ]);
     }
 }
