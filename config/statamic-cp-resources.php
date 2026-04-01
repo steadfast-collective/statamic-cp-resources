@@ -1,5 +1,14 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Legacy Configuration (Backward Compatibility)
+|--------------------------------------------------------------------------
+| These values are now managed via the CP: Tools > Addons > Settings.
+| Settings saved in the CP take precedence over values in this file.
+| This file is retained so existing published configs continue to work.
+*/
+
 return [
 
     'nav' => [
