@@ -60,7 +60,7 @@
                 @foreach($looms as $loom)
                     <div class="w-full md:w-1/2 mb-4 pr-4">
                         <div class="mb-2" style="position: relative; padding-bottom: 60.55625790139065%; height: 0;">
-                            <iframe src="{{ $loom['embed_url'] }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                            <iframe src="{{ $loom['embed_url'] }}" loading="lazy" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
                         </div>
                         <h3>{{ $loom['name'] }}</h3>
                     </div>
@@ -72,5 +72,5 @@
 @endsection
 
 @push('head')
-    <link rel="preconnect" href="https://loom.com" />
+    <link rel="preconnect" href="https://www.loom.com" />
 @endpush

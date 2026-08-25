@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.2.1 (2026-08-25)
+
+### What's fixed
+
+* Fixed most videos failing to load by deferring off-screen embeds
+* Fixed the preconnect hint pointing at the wrong Loom origin
+
 ## v2.1.1 (2023-09-13)
 
 ### What's fixed
