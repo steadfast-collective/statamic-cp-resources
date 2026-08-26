@@ -59,8 +59,18 @@
             <div class="flex flex-row flex-wrap">
                 @foreach($looms as $loom)
                     <div class="w-full md:w-1/2 mb-4 pr-4">
-                        <div class="mb-2" style="position: relative; padding-bottom: 60.55625790139065%; height: 0;">
-                            <iframe src="{{ $loom['embed_url'] }}" loading="lazy" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                        <div class="mb-2 rounded overflow-hidden" style="position: relative; padding-bottom: 60.55625790139065%; height: 0; background-color: #18181b;">
+                            <button
+                                type="button"
+                                class="loom-embed"
+                                data-embed-url="{{ $loom['embed_url'] }}"
+                                aria-label="{{ __('Play') }}: {{ $loom['name'] }}"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: transparent; border: 0; cursor: pointer;"
+                            >
+                                <svg class="h-12 w-12 text-white opacity-75 hover:opacity-100" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </button>
                         </div>
                         <h3>{{ $loom['name'] }}</h3>
                     </div>
@@ -73,4 +83,24 @@
 
 @push('head')
     <link rel="preconnect" href="https://www.loom.com" />
+    <script>
+        document.addEventListener('click', (event) => {
+            const button = event.target.closest('.loom-embed');
+
+            if (! button) {
+                return;
+            }
+
+            const url = button.dataset.embedUrl;
+            const iframe = document.createElement('iframe');
+
+            iframe.src = url + (url.includes('?') ? '&' : '?') + 'autoplay=1';
+            iframe.allow = 'autoplay; fullscreen';
+            iframe.frameBorder = '0';
+            iframe.allowFullscreen = true;
+            iframe.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;');
+
+            button.replaceWith(iframe);
+        });
+    </script>
 @endpush

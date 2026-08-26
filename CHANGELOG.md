@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.3.0 (2026-08-26)
+
+### What's fixed
+
+* Videos now load when clicked rather than all at once, fixing every embed rendering blank on pages with a long video list. `loading="lazy"` in v3.2.1 did not fix this — it defers embeds, it does not limit them, so all of them still loaded and exhausted the browser's resource budget.
+
 ## v3.2.1 (2026-08-25)
 
 ### What's fixed
